@@ -21,7 +21,15 @@ public class Postre {
         aderezos= new ArrayList<>();
         this.sabor=sabor;
     }
+    //////////////////////////////////////////////////////////////
+    public void anadirAderezo(Aderezo aderezo){
+        aderezos.add(aderezo);
+    }
     
+    public void quitarAderezo(Aderezo aderezo){
+        aderezos.remove(aderezo);
+    }
+    ///////////////////////////////////////////////////////////////
     public double calcularPrecioFinal(){
         double precioFinal;
         precioFinal=(precioParcial+(precioParcial*0.12))+(aderezos.size()*0.50);
