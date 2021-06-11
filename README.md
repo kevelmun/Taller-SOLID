@@ -19,6 +19,30 @@ Clases Procesos.OperacionesAderezo y Postre. ¿Es necesaria la clase Operaciones
 La clase OperacionesAderezo vioala el principio de single-responsibility pues esta clase tiene funcionalidades de otros objetos, también esta clase no cumple el principio Open-Close pues, si se quisiese añadir otros tipos de postres se tendrían que añadir otros dos métodos, pero ahora que ya existe la clase Postre es mas factible reemplazar la clase OperacionesAderezo por simplemente un método dentro de la clase Postre.
 
  ![image](https://user-images.githubusercontent.com/72930050/121601921-3145ac00-ca0c-11eb-8519-11ca15541e6f.png)
+ 
+ 
+ 3. Single Responsability Principle
+
+Métodos calcularPrecioFinal() y  showPrecioFinal() están muy relacionados, deben estar en otra clase por si cambia la fórmula de cálculo.
+
+![Captura](https://user-images.githubusercontent.com/72809497/121627228-9618fa80-ca3c-11eb-8ae0-2f3671059b01.PNG)
+
+Los procesos para manejar el precio de los productos se encuentran dentro de las clases propias de cada producto, haciendo que la clase Postre posee la responsabilidad de hacer cálculos que podrían ser realizados por la clase ManejadorDePrecio sin afectar a la funcionalidad de dichas clases.
+
+![Captura 2](https://user-images.githubusercontent.com/72809497/121627243-9addae80-ca3c-11eb-9b0c-6684097bd43d.PNG)
+
+
+4. Single Responsability Principle
+
+Enum Adicionales.Aderezo es muy estático, debe convertirse en clase abstract con un atributo nombre y un método abstracto setNombre para que cada tipo de aderezo sea una subclase de Aderezo e implemente dicho método. 
+
+![Captura 3](https://user-images.githubusercontent.com/72809497/121627248-9ca77200-ca3c-11eb-9e45-539c7b736228.PNG)
+
+La clase Aderezo es demasiado simple y hasta cierto punto ambiguoa, ya que no se podrían añadir nuevas funcionalidades para los aderezos si únicamente se limitan a ser un nombre, por ello se cambia el tipo de clase de Aderezo a Clase Abstracta y se crea una clase para cada distinto tipo de aderezo, además, se sobrescribe el método toString() en la clase Aderezo para que devuelva el nombre del aderezo en mayúsculas.
+
+![Captura 4](https://user-images.githubusercontent.com/72809497/121627253-9f09cc00-ca3c-11eb-8f17-4c6b459dd43b.PNG)
+
+ 
 
 5. Dependency inversion principle
 
