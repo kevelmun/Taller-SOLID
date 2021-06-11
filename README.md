@@ -19,3 +19,9 @@ Clases Procesos.OperacionesAderezo y Postre. ¿Es necesaria la clase Operaciones
 La clase OperacionesAderezo vioala el principio de single-responsibility pues esta clase tiene funcionalidades de otros objetos, también esta clase no cumple el principio Open-Close pues, si se quisiese añadir otros tipos de postres se tendrían que añadir otros dos métodos, pero ahora que ya existe la clase Postre es mas factible reemplazar la clase OperacionesAderezo por simplemente un método dentro de la clase Postre.
 
  ![image](https://user-images.githubusercontent.com/72930050/121601921-3145ac00-ca0c-11eb-8519-11ca15541e6f.png)
+
+5. Dependency inversion principle
+
+La clase Manejador de archivos no cumplia con el dependency inversion principle, ya que contaba con un constructor que no recibia el que leche se utilizaria en el postre. Para solucionar este problema se implemento un contructor que reciba la leche para asi realizar una validacion al momento de utilar el metodo de manejadorDeLeche para los pasteles, si la leche es deslactosada se mostrara un mensaje diciendo que no se puede usar esa leche en un pastel.
+
+![image](https://user-images.githubusercontent.com/76917298/121623391-3703b780-ca35-11eb-8958-2b81ae0b7ce6.png)
