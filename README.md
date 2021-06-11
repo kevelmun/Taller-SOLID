@@ -46,6 +46,16 @@ La clase Aderezo es demasiado simple y hasta cierto punto ambiguoa, ya que no se
 
 5. Dependency inversion principle
 
-La clase Manejador de archivos no cumplia con el dependency inversion principle, ya que contaba con un constructor que no recibia el que leche se utilizaria en el postre. Para solucionar este problema se implemento un contructor que reciba la leche para asi realizar una validacion al momento de utilar el metodo de manejadorDeLeche para los pasteles, si la leche es deslactosada se mostrara un mensaje diciendo que no se puede usar esa leche en un pastel.
+La clase Manejador de archivos no cumplia con el dependency inversion principle, ya que contaba con un constructor que no recibia el que leche se utilizaria en el postre. 
 
-![image](https://user-images.githubusercontent.com/76917298/121623391-3703b780-ca35-11eb-8958-2b81ae0b7ce6.png)
+![image](https://user-images.githubusercontent.com/76917298/121629789-8d76f300-ca41-11eb-90b0-77c51924e5cb.png)
+
+Para solucionar este problema se implemento un contructor que reciba la leche para asi realizar una validacion al momento de utilar el metodo de manejadorDeLeche para los pasteles, si la leche es deslactosada se mostrara un mensaje diciendo que no se puede usar esa leche en un pastel.
+
+![121623391-3703b780-ca35-11eb-8958-2b81ae0b7ce6](https://user-images.githubusercontent.com/76917298/121629527-fb6eea80-ca40-11eb-9bd1-3e357bd5e402.png)
+
+6. Implementacion del nuevo codigo con las respectivas correciones.
+![image](https://user-images.githubusercontent.com/76917298/121629593-21948a80-ca41-11eb-84bb-9725ab272314.png)
+![image](https://user-images.githubusercontent.com/76917298/121629628-340ec400-ca41-11eb-99cb-b0130dbc90cc.png)
+
+
